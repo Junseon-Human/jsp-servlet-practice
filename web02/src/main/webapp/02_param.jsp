@@ -11,7 +11,6 @@
 	<form name="frm" method = "get" action="ParamServlet">
 		아이디 : <input type="text" name="id" required><p>
 		나이 : <input type="text" name="age" required><p>
-		사는곳 :
 		<input type="submit" value="전송" onclick="return check()">
 	</form>
 </body>
