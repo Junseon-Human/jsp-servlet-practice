@@ -7,10 +7,10 @@
 <jsp:useBean id="member" class="com.keduit.MemberBean"/>
 <%
 com.keduit.MemberBean member2 = new MemberBean();
-member.setName(request.getParameter("name"));
-member.setUserid(request.getParameter("name"));
-member.setPwd(request.getParameter("name"));
-member.setNickname(request.getParameter("name"));
+member2.setName(request.getParameter("name"));
+member2.setUserid(request.getParameter("name"));
+member2.setPwd(request.getParameter("name"));
+member2.setNickname(request.getParameter("name"));
 %>
 
 <jsp:setProperty property="*" name="member"/>
