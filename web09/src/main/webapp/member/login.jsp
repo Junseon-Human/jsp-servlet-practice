@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>로그인</title>
-<script src="../script/member.js" type="text/javascript"></script>
+<script src="script/member.js" type="text/javascript"></script>
 <style>
     label{
     display:inline-block;

@@ -47,3 +47,12 @@ function joinCheck() {
 	}
 	return true;
 }
+
+function updateCheck() {
+	if (document.frm.pwd.value != document.frm.pwd_c.value) {
+			alert("비밀번호가 일치하지않습니다.");
+			frm.pwd.focus();
+			return false;
+		}
+		return true;
+}

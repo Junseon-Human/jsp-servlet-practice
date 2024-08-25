@@ -3,11 +3,9 @@ package com.keduit.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
-import javax.naming.NamingException;
 import javax.sql.DataSource;
 
 import com.keduit.dto.MemberVo;
@@ -162,4 +160,60 @@ public class MemberDAO {
 		
 	}
 	
+	// 회원 가입 처리
+	public int insertMember(MemberVo mVO) {
+		int result = -1;
+		String sql = "insert into member values(?, ?, ?, ?, ?, ?)";
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		try {
+			conn = getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, mVO.getName());
+			pstmt.setString(2, mVO.getUserid());
+			pstmt.setString(3, mVO.getPwd());
+			pstmt.setString(4, mVO.getEmail());
+			pstmt.setString(5, mVO.getPhone());
+			pstmt.setInt(6, mVO.getAdmin());
+			result = pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				pstmt.close();
+				conn.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return result;
+	}
+	
+	public int updateMember(MemberVo mVO) {
+		int result = -1;
+		String sql = "update member set pwd=?, email=?, phone=?,admin=? where userid=?";
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		try {
+			conn = getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, mVO.getPwd());
+			pstmt.setString(2, mVO.getEmail());
+			pstmt.setString(3, mVO.getPhone());
+			pstmt.setInt(4, mVO.getAdmin());
+			pstmt.setString(5, mVO.getUserid());
+			result = pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}  finally {
+			try {
+				pstmt.close();
+				conn.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		
+		return result;
+	}
 }
