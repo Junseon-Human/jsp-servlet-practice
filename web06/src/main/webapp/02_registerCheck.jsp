@@ -22,6 +22,7 @@ member2.setNickname(request.getParameter("name"));
 </head>
 <body>
 <h1>회원 정보</h1>
+이 름 : <%= member2.getName() %><p>
 이 름 : <jsp:getProperty property="name" name="member"/><p>
 아이디 : <jsp:getProperty property="userid" name="member"/><p>
 비밀번호 : <jsp:getProperty property="pwd" name="member"/><p>

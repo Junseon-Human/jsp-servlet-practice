@@ -10,7 +10,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>표현언어의 내장 객체 명시저으로 사용하기</title>
+<title>표현언어의 내장 객체 명시적으로 사용하기</title>
 </head>
 <body>
 <h1>표현언어의 내장 객체 명시저으로 사용하기</h1>

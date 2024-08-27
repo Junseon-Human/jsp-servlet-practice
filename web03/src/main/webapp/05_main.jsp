@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>main</title>
+</style>
 </head>
 <body>
 

@@ -18,8 +18,8 @@
 비밀번호 : ${param.pwd}
 <p></p>
 좋아하는 계절 : 
-<c:forEach items="${paramValues.season}" var="season">
-	${ season }
+<c:forEach items="${paramValues.season}" var="sea">
+	${ sea }
 </c:forEach>
 <hr>
 당신이 입력한 정보입니다(고전적인 방식).<p>

@@ -28,7 +28,7 @@
 </head>
 <body>
     <form action="JoinServlet" name="info">
-    <label for="name">이름</label>
+    <label for="name">이람</label>
     <span>*
     <input type="text" id="name" name="name">
     </span>

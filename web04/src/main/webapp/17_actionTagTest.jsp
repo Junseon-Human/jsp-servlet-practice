@@ -13,7 +13,7 @@
 	</jsp:forward>
 	<% } else { %>
 		<jsp:forward page="19_manager.jsp">
-			<jsp:param value="<%= URLEncoder.encode(\"한정교\", \"UTF-8\") %>" name="userName"/>
+			<jsp:param value="<%= URLEncoder.encode(\"관리자\", \"UTF-8\") %>" name="userName"/>
 		</jsp:forward>
 <%
 	}
