@@ -3,6 +3,7 @@ package com.keduit.controller;
 import com.keduit.controller.action.Action;
 import com.keduit.controller.action.BoardCheckFormAction;
 import com.keduit.controller.action.BoardCheckPassAction;
+import com.keduit.controller.action.BoardDeleteAction;
 import com.keduit.controller.action.BoardListAction;
 import com.keduit.controller.action.BoardUpdateAction;
 import com.keduit.controller.action.BoardUpdateFormAction;
@@ -41,6 +42,8 @@ public class ActionFactory {
 			action = new BoardUpdateFormAction(); 
 		}else if(command.equals("board_update")) {
 			action = new BoardUpdateAction();
+		}else if(command.equals("board_delete")) {
+			action = new BoardDeleteAction();
 		}
 		return action;
 	}
