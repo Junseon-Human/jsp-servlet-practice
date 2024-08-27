@@ -40,7 +40,7 @@
 <p></p>
 <input type="submit" value="수정" onclick="return boardCheck()" /> <%-- 유효성체크 --%>
 <input type="reset" value="다시작성" />
-<input type="button" value="게시글목록" onclick="Location.href='BoardServlet?command=board_list'" /> <%-- boardList.jsp 화면으로 이동 --%>
+<input type="button" value="게시글목록" onclick="location.href='BoardServlet?command=board_list'" /> <%-- boardList.jsp 화면으로 이동 --%>
 </form>
 </div>
 </body>
